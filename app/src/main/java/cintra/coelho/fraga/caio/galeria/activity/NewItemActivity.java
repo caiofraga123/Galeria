@@ -1,8 +1,10 @@
-package cintra.coelho.fraga.caio.galeria;
+package cintra.coelho.fraga.caio.galeria.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import cintra.coelho.fraga.caio.galeria.R;
 
 public class NewItemActivity extends AppCompatActivity {
 
