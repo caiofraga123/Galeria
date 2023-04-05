@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Galeria</string>
+    <string name="etTitle_text">Título</string>
+    <string name="button_text">ADICIONAR ITEM</string>
+    <string name="etDesc_text">Descrição</string>
+    <string name="tvTitle_text">Título</string>
+    <string name="tvDesc_text">Descrição</string>
 </resources>
