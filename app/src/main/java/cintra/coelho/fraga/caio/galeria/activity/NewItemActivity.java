@@ -1,12 +1,15 @@
 package cintra.coelho.fraga.caio.galeria.activity;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import cintra.coelho.fraga.caio.galeria.R;
 
@@ -29,5 +32,17 @@ public class NewItemActivity extends AppCompatActivity {
                 startActivityForResult(photoPickerIntent, PHOTO_PICKER_REQUEST);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == PHOTO_PICKER_REQUEST) {
+            if (resultCode == Activity.RESULT_OK) {
+                photoSelected = data.getData();
+                ImageView imvPhotoPreview = findViewById(R.id.imvPhotoPreview);
+                imvPhotoPreview.setImageURI(photoSelected);
+            }
+        }
     }
 }
